@@ -1,0 +1,74 @@
+@import url("https://use.typekit.net/ivq4uiu.css");
+
+html {
+  background: #2b2a34;
+  color: #f2f2f2;
+}
+
+.container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards in a row */
+  gap: 20px;
+  max-width: 1200px; /* To center-align and keep a reasonable width */
+  width: 100%;
+}
+
+.testimonial-wrapper {
+  padding: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.testimonial-wrapper:hover {
+  margin-top: -3px;
+}
+
+.testimonial {
+  background: #393846;
+  box-shadow: 0 15px 100px #1e1d25;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.quote {
+  font-size: 1.3rem;
+  color: #f2f2f2;
+  font-family: halyard-text, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  letter-spacing: 0.02rem;
+  margin-bottom: 15px;
+}
+
+.attribution {
+  color: #d78118;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  font-family: poppins, sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  font-style: normal;
+  text-align: right;
+}
+
+/* Media Queries for Responsive Layout */
+@media (max-width: 1024px) {
+  .columns {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards in a row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .columns {
+    grid-template-columns: 1fr; /* 1 card per row on small screens */
+  }
+}

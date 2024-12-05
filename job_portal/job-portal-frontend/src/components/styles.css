@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext");
+
+body {
+  background: #fffafa;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.2s linear;
+}
+
+.box {
+  width: 300px;
+  height: 400px;
+  background: #e3e3e3;
+  border-radius: 10px;
+  box-shadow: 26px 26px 53px #c1c1c1, -26px -26px 53px #ffffff;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: all 0.2s linear;
+  position: relative; /* Ensure positioning for child elements */
+}
+
+.box .slicica {
+  transform: translateZ(60px);
+  position: relative;
+  transition: all 0.2s linear;
+}
+
+.box .content {
+  position: absolute;
+  width: 278px;
+  height: 200px;
+  left: 10px; /* Adjust for better alignment */
+  top: 150px; /* Adjust this for proper placement */
+  text-align: center;
+  background: rgba(170, 170, 170, 0.8); /* Slightly darker for better visibility */
+  font-size: 17px;
+  transition: all 0.2s linear;
+  transform-origin: left;
+  transform: translateZ(0) scale(0); /* Start hidden, no Z-axis movement */
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  z-index: 0; /* Start below */
+}
+
+.box:hover .content {
+  transform: translateZ(60px) scale(1); /* Show content on hover */
+  z-index: 1; /* Bring it above the image */
+}
+
+.box:hover .slicica {
+  margin-left: -58px;
+  transform: translateZ(90px);
+}

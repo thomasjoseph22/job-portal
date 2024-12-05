@@ -1,0 +1,35 @@
+body {
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Base Styles for the Dashboard */
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  gap: 20px; /* Space between cards */
+}
+
+/* Dashboard Card Styles */
+.dashboard-card {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 1 1 calc(33.33% - 20px); /* Three cards in a row on larger screens */
+  min-width: 250px; /* Minimum width for cards */
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 700px) {
+  .dashboard-card {
+    flex: 1 1 calc(50% - 20px); /* Two cards in a row on medium screens */
+  }
+}
+
+@media (max-width: 450px) {
+  .dashboard-card {
+    flex: 1 1 100%; /* One card in a row on small screens */
+  }
+}

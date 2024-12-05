@@ -1,0 +1,104 @@
+.projcard-container {
+  margin: 50px 0;
+}
+
+.projcard {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Default height */
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  overflow: hidden;
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.projcard:hover {
+  box-shadow: 0 34px 32px -33px rgba(0, 0, 0, 0.18);
+  transform: translate(0px, -3px);
+}
+
+.projcard-innerbox {
+  display: flex;
+}
+
+.projcard-img {
+  height: 300px;
+  width: 400px;
+  object-fit: cover;
+}
+
+.projcard-textbox {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.projcard-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.projcard-subtitle {
+  font-size: 18px;
+  color: #888;
+}
+
+.projcard-bar {
+  width: 50px;
+  height: 4px;
+  background-color: #007bff;
+  margin: 10px 0;
+}
+
+.projcard-description {
+  font-size: 16px;
+}
+
+.projcard-tagbox button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.projcard-tagbox button:hover {
+  background-color: #0056b3;
+}
+
+.projcard-tagbox a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .projcard-innerbox {
+    flex-direction: column; /* Stack text and image vertically */
+    height: auto; /* Allow the card to expand */
+  }
+
+  .projcard-img {
+    width: 100%; /* Full width for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .projcard-textbox {
+    padding-left: 0; /* Remove padding on smaller screens */
+    padding-top: 10px; /* Add some spacing above the text */
+  }
+}
+
+@media (max-width: 500px) {
+  .projcard {
+    height: 590px; /* Increase height for smaller screens */
+  }
+  
+  
+}
